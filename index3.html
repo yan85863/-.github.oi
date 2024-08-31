@@ -616,7 +616,7 @@ document.getElementById('qa-form').addEventListener('submit', function(event) {
         q4: 'b',
         q5: 'b',
         q6: 'd',
-        q7: 'a',
+        q7: 'b',
         q8: 'a',
         q9: 'a',
         q10:'b',
@@ -634,7 +634,7 @@ document.getElementById('qa-form').addEventListener('submit', function(event) {
     const resultMessage = `
         <div class="emoji">${score >= 8 ? '🎉' : '😊'}</div>
         <h3>你的得分: ${score} / 10</h3>
-        <p>${score >= 8 ? '恭喜你，答对了大部分问题！' : '继续努力，再试一次吧！'}</p>
+        <p>${score >= 8 ? '恭喜你，答对了大部分问题！' : '别说了你是假粉！'}</p>
     `;
 
     document.getElementById('result').innerHTML = resultMessage;

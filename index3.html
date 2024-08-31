@@ -262,6 +262,149 @@
             text-decoration: underline;
         }
 
+        /* Q&A Section */
+.footer
+qa-section {
+    padding: 40px 20px;
+    background-color: #fafafa;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qa-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff6f61;
+    font-family: 'Playfair Display', serif;
+}
+
+.qa-section .question {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.qa-section .question p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.qa-section .question label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.qa-section .question input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+.qa-section .results {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qa-section .results h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.qa-section .results p {
+    font-size: 18px;
+    color: #555;
+}
+
+        .qa-section .question label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .qa-section .question input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .qa-section .results {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .qa-section .results p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* Improved result styling */
+/* 美观的结果显示 */
+#result {
+    background: linear-gradient(135deg, #ffffff 0%, #fce4ec 100%);
+    border: 2px solid #ff6f61;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+#result h3 {
+    font-size: 28px;
+    color: #ff6f61;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+#result p {
+    font-size: 20px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+#result .emoji {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 提交按钮样式 */
+button[type="submit"] {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff9999;
+    transform: scale(1.05);
+}
+
+
         /* Mobile styles */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -345,7 +488,7 @@
     </div>
 
     <section id="introduction" class="character-intro">
-        <img src="头像4.jpg" alt="Loopy">
+        <img src="C:\Users\Admin\Desktop\test\头像4.jpg" alt="Loopy">
         <div>
             <h2>关于 Loopy</h2>
             <p>
@@ -363,6 +506,87 @@
         </div>
     </section>
 
+    <section id="qa" class="qa-section">
+        <h2>Loopy 的 Q&A 问题</h2>
+        <form id="qa-form">
+            <div class="question">
+                <button type="submit">提交</button>
+        </form>
+        <div id="result" class="result"></div>
+                <p>1. Loopy 的颜色是什么？</p>
+                <label><input type="radio" name="q1" value="a"> 红色</label>
+                <label><input type="radio" name="q1" value="b"> 绿色</label>
+                <label><input type="radio" name="q1" value="c"> 蓝色</label>
+                <label><input type="radio" name="q1" value="d"> 粉色</label>
+            </div>
+            <div class="question">
+                <p>2. Loopy 来自哪个动画片？</p>
+                <label><input type="radio" name="q2" value="a"> 蜡笔小新</label>
+                <label><input type="radio" name="q2" value="b"> 小企鹅宝露露</label>
+                <label><input type="radio" name="q2" value="c"> 海绵宝宝</label>
+                <label><input type="radio" name="q2" value="d"> LOOPY</label>
+            </div>
+            <div class="question">
+                <p>3. Loopy 是什么动物？</p>
+                <label><input type="radio" name="q3" value="a"> 企鹅</label>
+                <label><input type="radio" name="q3" value="b"> 粉老鼠</label>
+                <label><input type="radio" name="q3" value="c"> 海狸</label>
+                <label><input type="radio" name="q3" value="d"> 粉狐狸</label>
+            </div>
+            <div class="question">
+                <p>4. Loopy 他性格是怎么样？</p>
+                <label><input type="radio" name="q4" value="a"> 社牛&爱管闲事</label>
+                <label><input type="radio" name="q4" value="b"> 胆小&怕事</label>
+                <label><input type="radio" name="q4" value="c"> 懒惰&爱搞事情</label>
+                <label><input type="radio" name="q4" value="d"> 自信&爱闯祸</label>
+            </div>
+            <div class="question">
+                <p>5. Loopy 是男的女的？</p>
+                <label><input type="radio" name="q5" value="a"> 男</label>
+                <label><input type="radio" name="q5" value="b"> 女</label>
+                <label><input type="radio" name="q5" value="c"> -</label>
+                <label><input type="radio" name="q5" value="d"> -</label>
+            </div>
+            <div class="question">
+                <p>6. Loopy 他几岁？</p>
+                <label><input type="radio" name="q6" value="a"> 9</label>
+                <label><input type="radio" name="q6" value="b"> 45</label>
+                <label><input type="radio" name="q6" value="c"> 35</label>
+                <label><input type="radio" name="q6" value="d"> 7</label>
+            </div>
+            <div class="question">
+                <p>7. Loopy 他的兴趣爱好是什么？</p>
+                <label><input type="radio" name="q7" value="a">什么兴趣爱好都没有 </label>
+                <label><input type="radio" name="q7" value="b"> 烹饪</label>
+                <label><input type="radio" name="q7" value="c"> 唱歌</label>
+                <label><input type="radio" name="q7" value="d"> 运动</label>
+            </div>
+            <div class="question">
+                <p>8. Loopy 爱笑吗？</p>
+                <label><input type="radio" name="q8" value="a">爱笑 </label>
+                <label><input type="radio" name="q8" value="b"> 不爱笑</label>
+                <label><input type="radio" name="q8" value="c"> -</label>
+                <label><input type="radio" name="q8" value="d"> -</label>
+            </div>
+            <div class="question">
+                <p>9. Loopy 的弱点是什么？</p>
+                <label><input type="radio" name="q9" value="a"> 运动</label>
+                <label><input type="radio" name="q9" value="b"> 烹饪</label>
+                <label><input type="radio" name="q9" value="c"> 唱歌</label>
+                <label><input type="radio" name="q9" value="d"> 阅读</label>
+            </div>
+            <div class="question">
+                <p>10. Loopy 他特别喜欢为她的朋友做什么？</p>
+                <label><input type="radio" name="q10" value="a"> 唱歌给她朋友听 </label>
+                <label><input type="radio" name="q10" value="b"> 烤蛋糕和馅饼</label>
+                <label><input type="radio" name="q10" value="c"> 帮助他的朋友</label>
+                <label><input type="radio" name="q10" value="d"> 抛弃它的朋友</label>
+            </div>
+            
+        </form>
+        
+    </section>
+
     <footer class="footer">
         <p>&copy; 2024 Loopy's World. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
@@ -378,6 +602,46 @@
                 navList.classList.toggle('open');
             });
         });
+
+        // JavaScript to handle the Q&A form submission
+       // JavaScript to handle the Q&A form submission
+// JavaScript to handle the Q&A form submission
+document.getElementById('qa-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const answers = {
+        q1: 'd',
+        q2: 'b',
+        q3: 'c',
+        q4: 'b',
+        q5: 'b',
+        q6: 'd',
+        q7: 'a',
+        q8: 'a',
+        q9: 'a',
+        q10:'b',
+    };
+
+    let score = 0;
+    for (let i = 1; i <= 10; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selected && selected.value === answers[`q${i}`]) {
+            score++;
+        }
+    }
+
+    // 动态生成结果内容
+    const resultMessage = `
+        <div class="emoji">${score >= 8 ? '🎉' : '😊'}</div>
+        <h3>你的得分: ${score} / 10</h3>
+        <p>${score >= 8 ? '恭喜你，答对了大部分问题！' : '继续努力，再试一次吧！'}</p>
+    `;
+
+    document.getElementById('result').innerHTML = resultMessage;
+});
+
+
     </script>
 </body>
 </html>
+
